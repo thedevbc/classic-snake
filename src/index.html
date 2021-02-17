@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Classic Snake</title>
     <style>
-        body{
-            margin: 0px;
-            padding: 0px;
-            height: 100vh;
+        html, body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-flow: column nowrap;
         }
         .main {
             flex: 1 1 auto;
             display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            flex-flow: column nowrap;
+            justify-content: space-between;
             align-items: center;
-            height: 95%;
+            max-height: 95%;
         }
         canvas{
             border-radius: 5px;

@@ -121,12 +121,12 @@ function checkAppleCollision() {
         appleY = getNewAppleLocation(appleY);
         tailLength++;
         score++;
-        if (score > 10) {
+        if (score % 5 == 0) {
             speed++;
             if (1000/speed <= 5) {
                 speed--;
             }
-            console.log(speed);
+            // console.log(speed);
         }
     }
 }
