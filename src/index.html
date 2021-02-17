@@ -8,11 +8,15 @@
         body{
             margin: 0px;
             padding: 0px;
+            height: 100vh;
+        }
+        .main {
+            flex: 1 1 auto;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            height: 100vh;
+            height: 95%;
         }
         canvas{
             border-radius: 5px;
@@ -58,13 +62,15 @@
 </head>
 
 <body>
-    <h1>Classic Snake</h1>
-    <canvas id="game" width="320" height="320"></canvas>
-    <button id="play" onclick="onPlayBtnClick()" tabindex="1">Play Again</button>
-    <p>Use left/right cursor keys to move snake and eat apples.</p>
-    <div id="touchControls">
-        <button class="disable-dbl-tap-zoom" id="left" onclick="onLeftBtnClick()" tabindex="0"><</button>
-        <button class="disable-dbl-tap-zoom" id="right" onclick="onRightBtnClick()" tabindex="0">></button>
+    <div class="main">
+        <h1>Classic Snake</h1>
+        <canvas id="game" width="320" height="320"></canvas>
+        <button id="play" onclick="onPlayBtnClick()" tabindex="1">Play Again</button>
+        <p>Use left/right cursor keys to move snake and eat apples.</p>
+        <div id="touchControls">
+            <button class="disable-dbl-tap-zoom" id="left" onclick="onLeftBtnClick()" tabindex="0"><</button>
+            <button class="disable-dbl-tap-zoom" id="right" onclick="onRightBtnClick()" tabindex="0">></button>
+        </div>
     </div>
     <script src="./index.js"></script>
 </body>
