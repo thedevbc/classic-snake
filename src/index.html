@@ -36,6 +36,7 @@
             display: flex;
             flex-flow: row nowrap;
             align-self: stretch;
+            touch-action: manipulation;
         }
 
         #touchControls button {
@@ -47,8 +48,12 @@
             background-color: rgba(255,40,70,.9);
             border: none;
             border-radius: 5px;
+            touch-action: manipulation;
         }
 
+        .disable-dbl-tap-zoom {
+            touch-action: manipulation;
+        }
     </style>    
 </head>
 
@@ -58,8 +63,8 @@
     <button id="play" onclick="onPlayBtnClick()" tabindex="1">Play Again</button>
     <p>Use left/right cursor keys to move snake and eat apples.</p>
     <div id="touchControls">
-        <button id="left" onclick="onLeftBtnClick()" tabindex="0"><</button>
-        <button id="right" onclick="onRightBtnClick()" tabindex="0">></button>
+        <button class="disable-dbl-tap-zoom" id="left" onclick="onLeftBtnClick()" tabindex="0"><</button>
+        <button class="disable-dbl-tap-zoom" id="right" onclick="onRightBtnClick()" tabindex="0">></button>
     </div>
     <script src="./index.js"></script>
 </body>
