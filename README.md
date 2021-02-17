@@ -11,6 +11,6 @@ Improvements (IMO) from Adam's version:
 - works in Safari on Mac (there were issues getting the Game Over! text to appear.
 - Added touch/click buttons for mobile
 - removed up/down key event listeners in order to stay true to 2D...you must become one with the snake!
-- after 10 points, gets faster at every point. This might be a place to change this to get faster every 5 points or so.
+- speed increases every 5 points
 
 Enjoy!
