@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Snake</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+        canvas{
+            border-radius: 5px;
+            box-shadow: black 10px 0 20px;
+        }
+        button#play {
+            flex: 0 1 auto;
+            visibility: hidden;
+            margin-top: 10px;
+            background-color: rgba(0,0,0,0);
+            border: 1px solid #cecece;
+            border-radius: 5px;
+        }
+        button#play:focus {
+            flex: 0 1 auto;
+            border:1px blue;
+        }
+
+        #touchControls {
+            flex: 1 1 auto;
+            display: flex;
+            flex-flow: row nowrap;
+            align-self: stretch;
+        }
+
+        #touchControls button {
+            flex: 1 1 auto;
+            margin: 3px;
+            padding: 5px 5px;
+            font-size: 3rem;
+            color: white;
+            background-color: rgba(255,40,70,.9);
+            border: none;
+            border-radius: 5px;
+        }
+
+    </style>    
+</head>
+
+<body>
+    <h1>Classic Snake</h1>
+    <canvas id="game" width="320" height="320"></canvas>
+    <button id="play" onclick="onPlayBtnClick()" tabindex="1">Play Again</button>
+    <p>Use left/right cursor keys to move snake and eat apples.</p>
+    <div id="touchControls">
+        <button id="left" onclick="onLeftBtnClick()" tabindex="0"><</button>
+        <button id="right" onclick="onRightBtnClick()" tabindex="0">></button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
